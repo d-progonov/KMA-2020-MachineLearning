@@ -1,0 +1,18 @@
+1. Методи агрегації даних (bagging) при налаштуванні класифікаторів.
+	bootstrap aggregating (boosting) is a technique to reduce the variance of an estimate to average together many estimates. For example, we can train 𝑀 different trees on different subsets of the data, chosen randomly with replacement, and then compute the ensemble f(x) = sum(f_m(x))/M
+	
+2. Обчислити антиградіент квадратичної функції втрат в точці x = 0, y = 1:
+  loss = 1/2 * (y - f(x)) ^2
+  f(x) = tg(x^2 - 2) + exp(sin(x))
+	
+	антиградіент - градієнт з від'ємним знаком
+	Маємо взяти градієнт від функції втрат по х та y:
+		loss_x = (y-f(x))*f'(x)_x, де f'(x)_x= 2x*sec^2(x^2-2)+exp(sin(x))*cos(x)
+		loss_y = (y - f(x))*1
+		
+		loss_x(0,1) = -2.185039863261519 * (0+1)=-2.185039863261519
+		loss_y(0,1)= 1-3.18503 = -2.185039863261519
+		
+		loss_x(0,1)+loss_y(0,1) = -4.37
+		
+		antigrad = -(loss_x(0,1)+loss_y(0,1))=4.37
