@@ -1,1 +1,5 @@
-bootstrap aggregating (bagging) is a technique to reduce the variance of an estimate to average together many estimates. For example, we can train 𝑀 different trees on different subsets of the data, chosen randomly with replacement, and then compute the ensemble f(x) = sum(f_m(x))/M
+bootstrap aggregating (bagging) is a technique to reduce 
+the variance of an estimate to average together many estimates. 
+For example, we can train 𝑀 different trees on different 
+subsets of the data, chosen randomly with replacement, and then 
+compute the ensemble f(x) = sum(f_m(x))/M
